@@ -29,6 +29,14 @@ th {
     background-color: #4caf50;
     color: white;
 }
+table td:nth-child(3), table th:nth-child(3) {
+    text-align: center;
+}
+
+table td form {
+    display: inline;
+    margin: 0 5px; 
+}
 
 .form-section {
     margin-bottom: 30px;

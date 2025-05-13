@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Item</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Item</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-    <h1>✏️ Edit Item</h1>
+  <h1>✏️ Edit Item</h1>
 
-    <section class="form-section">
-        <form action="/edit/<%= item.id %>" method="POST" class="form">
-            <input type="text" name="name" value="<%= item.name %>" required />
-            <textarea name="description" required><%= item.description %></textarea>
-            <button type="submit" class="btn edit">💾 Save Changes</button>
-        </form>
-    </section>
+  <section class="form-section">
+    <h2>Update Item Details</h2>
+    <form action="/update/<%= item.id %>" method="POST" class="form">
+      <input type="text" name="name" value="<%= item.name %>" placeholder="Item Name" required />
+      <textarea name="description" placeholder="Description" required><%= item.description %></textarea>
+      <button type="submit" class="btn edit">💾 Save Changes</button>
+    </form>
+  </section>
 
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="/" class="btn add">⬅️ Back to Home</a>
-    </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="/" class="btn add">Back to Home</a>
+  </div>
 </body>
 </html>
