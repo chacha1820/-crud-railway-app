@@ -29,13 +29,9 @@ th {
     background-color: #4caf50;
     color: white;
 }
+
 table td:nth-child(3), table th:nth-child(3) {
     text-align: center;
-}
-
-table td form {
-    display: inline;
-    margin: 0 5px; 
 }
 
 .form-section {
@@ -80,4 +76,39 @@ input, textarea {
 
 .btn:hover {
     opacity: 0.9;
+}
+td.actions {
+    text-align: center;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .action-buttons form {
+    margin: 0;
+  }
+  td.actions {
+    text-align: center;
+}
+  
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+  
+.action-buttons form {
+    margin: 0;
+}
+
+table td img {
+    width: 130px !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
 }
