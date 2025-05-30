@@ -1,0 +1,131 @@
+.footer {
+  background-color: var(--gray-800);
+  color: var(--gray-200);
+  padding: 3rem 0 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out sections */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 2rem; /* Space between sections */
+  margin-bottom: 2rem;
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+  flex: 1; /* Allow sections to grow equally */
+  min-width: 250px; /* Minimum width for each section */
+}
+
+.footer h3 {
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.footer-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--gray-300);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+  transform: translateX(5px);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column; /* Stack contact items vertically */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--gray-300); /* Ensure text color is consistent */
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--gray-700);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gray-700);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text on smaller screens */
+  }
+  
+  .footer h4::after {
+    left: 50%; /* Center the underline on smaller screens */
+    transform: translateX(-50%);
+  }
+  
+  .contact-item {
+    justify-content: center; /* Center contact items */
+  }
+  
+  .social-links {
+    justify-content: center; /* Center social links */
+  }
+  
+  .footer-links a:hover {
+    transform: none; /* Remove transform on hover for better usability */
+  }
+}
